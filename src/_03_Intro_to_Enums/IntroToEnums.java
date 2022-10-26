@@ -1,6 +1,7 @@
 package _03_Intro_to_Enums;
 
 import java.util.Random;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -21,21 +22,29 @@ public class IntroToEnums {
 
 		// 1. In your package explorer, create a new enum file called StatesOfMatter.
 		// Hint: This is very similar to how you create a new class file.
-
+			
 		// 2. Give the enum the following values:
 		// SOLID, LIQUID, GAS
-
+			
 		// 3. Create an array of StatesOfMatter with all the values using .values().
 		// Hint: Use "StatesOfMatter." as if it were a static method.
-
+			StatesOfMatter[] arr = new StatesOfMatter[StatesOfMatter.values().length];
+			arr = StatesOfMatter.values();
+			
 		// 4. Ask the user for a state of matter.
-
+			System.out.print("Type a state of matter: ");
 		// 5. Iterate through the array and find what the user entered.
 		// Hint: .name() or .toString
-
+			Scanner in = new Scanner(System.in);
+			String save = in.next();
+			for(int i=0;i<StatesOfMatter.values().length;i++) {
+				if(arr[i].toString().equalsIgnoreCase(save)) {
+					
+				}
+			}
 		// 6. Print outs its ordinal(order in the enum list)
 		// Hint: .ordinal()
-
+			
 		// 7. Add a celsiusTemp member variable to StatesOfMatter.
 		// Note: Make sure to encapsulate it.
 
